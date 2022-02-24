@@ -1,0 +1,7 @@
+@media (min-width: 600px) {
+    .cart-log{
+        position: relative;
+        margin-left: 35px;
+        margin-top: 25px;
+    }
+}

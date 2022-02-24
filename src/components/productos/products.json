@@ -1,0 +1,114 @@
+[ 
+    {
+       
+        "id":1,
+        "image": "hamburguesa.jpg",
+        "name":"Burguer chese",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"2 hamburguesas simples",
+        "Precio":750,
+        "categoria":"delivery"
+        
+
+    },
+    {
+
+        "id":2,
+        "image": "lomos.jpg",
+        "name":"Locolomo",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"2 lomos simples",
+        "Precio":850,
+        "categoria":"delivery"
+    
+        
+
+    },
+    {
+        "id":3,
+        "image": "muzza.jpg",
+        "name":"Pizza Piedra",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"2 pizzas muza",
+        "Precio":630,
+        "categoria":"delivery"
+        
+
+    },
+    {
+        "id":4,
+        "image": "migas.jpg",
+        "name":"Sanwich miga",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"docena de migas mixto",
+        "Precio":750,
+        "categoria":"frio"
+        
+
+    },
+    {
+        "id":5,
+        "image": "muzza.jpg",
+        "name":"Pizzarte",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"2 pizzas especiales",
+        "Precio":700,
+        "categoria":"delivery"
+        
+
+    },
+    {
+        "id":6,
+        "image": "fiambre.webp",
+        "name":"Almacen dario",
+        "tipo":"Almacen",
+        "contacto":3514898956,
+        "promo1":"1kg fiambre surtido + 2 adherezos+ 1doc pan viena",
+        "Precio":349,
+        "categoria":"frio"
+        
+
+    },
+    {
+        "id":7,
+        "image": "hamburguesa.jpg",
+        "name":"Hamburguesas beer",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"2 hamburguesas simples",
+        "Precio":650,
+        "categoria":"delivery"
+
+    },
+    {
+        "id":8,
+        "image": "lomos.jpg",
+        "name":"Lomiteria teco",
+        "tipo":"comida",
+        "contacto":3514898956,
+        "promo1":"2 lomos simples",
+        "Precio":850,
+        "categoria":"delivery"
+        
+
+    },
+    {
+        "id":9,
+        "image": "fiambre.webp",
+        "name":"Kiosco de todo",
+        "tipo":"Almacen",
+        "contacto":3514898956,
+        "promo1":"1kg fiambre surtido + 2 adherezos+ 1doc pan viena",
+        "Precio":349,
+        "categoria":"frio"
+        
+
+    }
+    
+
+]
