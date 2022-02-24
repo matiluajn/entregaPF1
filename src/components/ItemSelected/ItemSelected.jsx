@@ -57,19 +57,25 @@ export default function ItemSelected() {
   return (
      <>  
         {
-            <p>asasasas{filtro.name}</p>
-            //  filtro.map((e)=>
-            //  <div class="card" style={{width: "18rem"}}>
-            //  <img src={require(`../assets/${e.image}`)} class="card-img-top" alt="..."/>
-            //  <div class="card-body">
-            //      <h5 class="card-title">{e.name}</h5>
-            //      <p class="card-text">{e.promo1}</p>
-            //      <p class="card-text">{e.Precio}</p>
-            //      <p class="card-text">{e.categoria}</p>
-            //      <a href="#" class="btn btn-primary">Go somewhere</a>
-            //  </div>
-            //  </div>
-            //  )
+            
+           
+
+             filtro.map((e)=>{
+                return(
+                    <div class="card" style={{width: "18rem"}}>
+                    <img src={require(`../assets/${e.image}`)} class="card-img-top" alt="..."/>
+                    <div class="card-body">
+                        <h5 class="card-title">{e.name}</h5>
+                        <p class="card-text">{e.promo1}</p>
+                        <p class="card-text">{e.Precio}</p>
+                        <p class="card-text">{e.categoria}</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    </div>
+                )
+             })
+          
+            
 
 
      }
