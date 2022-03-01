@@ -3,6 +3,7 @@ import productsJson from '../productos/products.json'
 import { useParams} from 'react-router-dom'
 
 
+
 export default function ItemSelected() {
     const {categoria} = useParams()
     console.log('parametro',categoria)    

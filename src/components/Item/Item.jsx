@@ -1,6 +1,8 @@
 import React , {useState, useEffect}from 'react'
 import {useParams} from 'react-router-dom'
 import productsJson from '../productos/products.json'
+import ItemCount from '../ItemCount/ItemCount'
+import style from '../Item/Item.css'
 
 export default function Item() {
     const {id} = useParams()
@@ -38,7 +40,7 @@ export default function Item() {
   return (
 
     <div className='conteiner-fluid '>
-        <div className=''>
+        
         {
             prodFilt.length === 0 ?
             
@@ -49,16 +51,23 @@ export default function Item() {
             {
                 prodFilt.map((ele)=>{
                     return(
+                     <div className='row'>
                          
-                      <div class="card mb-3 text-dark bg-warning" style={{maxWidth:" 28rem"}}>
-                        <img src={require(`../assets/${ele.image}`)} class="card-img-top" alt="..."/>
-                        <div class="card-body">
-                          <h5 class="card-title">{ele.name}</h5>
-                          <p class="card-text">{ele.promo1}</p>
-                          <p class="card-text">${ele.Precio}</p>
-                          <p class="card-text"><small class="text-muted">{ele.categoria}</small></p>
-                        </div>
-                      </div>               
+                        <div class="card mb-3 text-dark bg-warning col align-self-start" style={{maxWidth:"30rem"}}>
+                            <img src={require(`../assets/${ele.image}`)} class="card-img-top" alt="..."/>
+                            <div class="card-body">
+                            <h5 class="card-title">{ele.name}</h5>
+                            <p class="card-text">{ele.promo1}</p>
+                            <p class="card-text">${ele.Precio}</p>
+                            <p class="card-text"><small class="text-muted">{ele.categoria}</small></p>
+                            </div>                          
+                        </div>   
+                            <div  className='col align-self-center item'>
+                               {<ItemCount/>}
+                               <button type="button" class="btn btn-warning boton">Agregar al carrito</button>
+                            </div>  
+                      </div>   
+                              
                        
                     )
                 })
@@ -67,7 +76,7 @@ export default function Item() {
         }
            
            </div>
-  </div>    
+     
              
              
             
