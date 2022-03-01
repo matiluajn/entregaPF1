@@ -4,40 +4,49 @@ import { useParams} from 'react-router-dom'
 
 
 export default function ItemSelected() {
-    const {categoria} = useParams();
-    console.log('param',categoria)
-    const [prod, setProd] = useState({});
-    const filtro = productsJson.filter((e)=>e.categoria===categoria);
-    useEffect(()=>{
-      const resp =  new Promise((resolve)=>{
+    const {categoria} = useParams()
+    console.log('parametro',categoria)    
+    const [prodFilt,setProdFilt] = useState([]);
+
+    const getProducts = (obProd)=>{
+        return new Promise((resolve,reject)=>{
+            const BD = productsJson;            
+            const filtrar = BD.filter((e)=>{
+                return e.categoria ===obProd;
+            });
+            
+            
             setTimeout(()=>{
-                resolve(filtro)
-            })
-        },2000)
-        resp.then((elem)=>{
-            setProd(elem)
+                resolve(filtrar)                
+            },2000)
+
         })
-    },[categoria])   
-           
 
-        
+    }
 
-    
+    useEffect(()=>{
+        const obProduct = async(categoria)=>{
+            const resp = await getProducts(categoria)           
+            console.log('respuesta',resp)
+            setProdFilt(resp);            
+        }
+        obProduct(categoria);
+    },[categoria])
 
-  
+  console.log(prodFilt)
 
 return(
     <div className='container-fluid '>
         <div className='row justify-content-evenly'>
         {
-            prod.length === 0 ?
+            prodFilt.length === 0 ?
             
             <p className='text-center fs-1'>Cargando</p>
             
             : 
            <>
             {
-                prod.map((ele)=>{
+                prodFilt.map((ele)=>{
                     return(
                          
                       <div class="card mb-3 text-dark bg-warning" style={{maxWidth:" 18rem"}}>
