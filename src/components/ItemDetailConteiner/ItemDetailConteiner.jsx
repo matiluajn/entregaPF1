@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {Link} from 'react-router-dom'
-import {useParams} from 'react-router-dom'
+
 
 
 
@@ -37,7 +37,7 @@ export default function ItemDetailConteiner({params}) {
                                 <p class="card-text">{e.promo1}</p>
                                 <p class="card-text">${e.Precio}</p> 
                                 <p class="card-text">{e.categoria}</p> 
-                                <Link to={`/category/${e.id}/${e.name}/${e.image}/${e.Precio}/${e.promo1}/${e.categoria}`}>
+                                <Link to={`/category/${e.id}`}>
                                 <button type="button" class="btn btn-warning">Ver Detalles</button>      
                                 </Link>                     
                               </div>

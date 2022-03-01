@@ -13,14 +13,10 @@ function App() {
     </div>
     <Routes>
       <Route path='/' element={<ItemListContainer/>}/>
-      <Route path='/category/:id/:name/:image/:Precio/:promo1/:categoria' element={<Item/>}/>
-      <Route path='/category:categoria' element={<ItemSelected/>}/>
-      <Route path='/category/:categoria' element={<ItemSelected/>}/>
-      
-
-      
-      
-     
+      <Route path='/category/:id' element={<Item/>}/>
+      <Route path='/categ/:categoria' element={<ItemSelected/>}/>
+        
+               
 
     </Routes>
     </BrowserRouter>

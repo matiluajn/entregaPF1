@@ -16,10 +16,10 @@ const Nav = () => {
                     <NavLink className="nav-link active" to={"/"}>Home</NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink className="nav-link active" to={"/category/delivery"}>Delivery</NavLink>
+                    <NavLink className="nav-link active" to={"/categ/delivery"}>Delivery</NavLink>
                     </li>
                     <li class="nav-item">
-                    <NavLink className="nav-link active" to={"/category/frio"}>Frio</NavLink>
+                    <NavLink className="nav-link active" to={"/categ/frio"}>Frio</NavLink>
                     </li>
                   
                 </ul>
