@@ -1,10 +1,32 @@
 import React , {useState, useEffect}from 'react'
 import {useParams} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import productsJson from '../productos/products.json'
 import ItemCount from '../ItemCount/ItemCount'
 import style from '../Item/Item.css'
 
 export default function Item() {
+    const [cart,setCart]=useState(0);
+  
+    const cont =(con)=>{
+       setCart(con)
+        
+    }
+   
+    const buttonAdd=()=>{
+        return(
+            
+                <div style={{padding: "10px", marginLeft:"3px"}}>
+                    {   <Link to={`/cart/${cart}`}>
+                        <button type="button" class="btn btn-success">Finalizar compra?</button>
+                        </Link>
+                    }
+
+                </div>
+            
+        )
+    }
+   
     const {id} = useParams()
     console.log('parametro',id)    
     const [prodFilt,setProdFilt] = useState([]);
@@ -51,7 +73,7 @@ export default function Item() {
             {
                 prodFilt.map((ele)=>{
                     return(
-                     <div className='row'>
+                     <div className='row' key={ele.id}>
                          
                         <div class="card mb-3 text-dark bg-warning col align-self-start" style={{maxWidth:"30rem"}}>
                             <img src={require(`../assets/${ele.image}`)} class="card-img-top" alt="..."/>
@@ -63,8 +85,16 @@ export default function Item() {
                             </div>                          
                         </div>   
                             <div  className='col align-self-center item'>
-                               {<ItemCount/>}
-                               <button type="button" class="btn btn-warning boton">Agregar al carrito</button>
+                              
+                               
+                               <ItemCount onAdd={(con)=>cont(con)} />
+                               {
+                               cart===0 ? 
+                               <br />
+                               :
+                               buttonAdd()
+                               }
+                               
                             </div>  
                       </div>   
                               

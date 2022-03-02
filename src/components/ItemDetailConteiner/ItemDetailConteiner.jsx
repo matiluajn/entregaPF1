@@ -17,7 +17,7 @@ export default function ItemDetailConteiner({params}) {
 
   return (
 
-    <div className='container-fluid'>
+    <div className='container'>
     <div className='row justify-content-evenly'>
         
         {           
